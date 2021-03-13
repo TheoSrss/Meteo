@@ -3,17 +3,13 @@
     margin: 0;
     padding: 0;
 }
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #f1f1f1;
     background: linear-gradient(45deg, rgb(59,50,50), rgb(22,28,29));
     height: 100vh;
+    overflow-y: hidden; 
 }
 
 .container {
@@ -22,7 +18,7 @@ body {
     background: linear-gradient(45deg, #1068b6, #ec60a6);
     display: grid;
     grid-template: 100px 300px 100px 100px / repeat(8, 100px);
-    margin: 100px auto 0;
+    margin: 20px auto 0 ;
     position: relative;
     border: 1px solid #f1f1f1;
 }
@@ -43,7 +39,7 @@ h1 {
     align-items: center;
 }
 .bloc-logo {
-    width: 50%;
+    width: 40%;
 }
 .bloc-logo img {
     width: 100%;
@@ -72,6 +68,9 @@ h1 {
 .jour-prevision-bloc {
     grid-area: 4 / 1 / 5 / -1;
 }
+.heure-nom-prevision,.jour-prevision-nom{
+    color: black ;
+}
 .jour-prevision-bloc, .heure-bloc-prevision {
     display: grid;
     grid-template: 100px / repeat(7, 1fr);
@@ -84,6 +83,9 @@ h1 {
     flex-direction: column;
     border-top: 1px solid #f1f1f1;
     font-size: 21px;
+}
+.bloc-j{
+        border-top: 3px solid black;
 }
 
 .bloc-h:not(:last-child), .bloc-j:not(:last-child) {
@@ -114,3 +116,27 @@ h1 {
 .disparition {
     opacity: 0;
 }
+@media screen and (max-width:900px){
+    .container{
+        width: 480px;
+        height: 360px;
+        grid-template: 50px 190px 60px 60px / repeat(8, 60px);
+
+    }
+    .bloc-info .temps {
+        font-size: 30px;
+    }
+    .bloc-info .temperature {
+        font-size: 45px;
+    }
+    .bloc-info .localisation {
+        font-size: 28px;
+    }
+    
+    .bloc-h, .bloc-j {
+        height: 60px;
+        font-size: 14.7px;
+    }   
+}
+
+
