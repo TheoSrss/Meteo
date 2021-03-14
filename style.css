@@ -19,7 +19,7 @@ body {
     display: grid;
     grid-template: 100px 300px 100px 100px / repeat(8, 100px);
     margin: 20px auto 20px ;
-    
+    position: relative;
     border: 1px solid #f1f1f1;
 }
 
