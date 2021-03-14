@@ -7,7 +7,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #f1f1f1;
-    background: linear-gradient(45deg, rgb(59,50,50), rgb(22,28,29));
+    background: rgb(59,50,50);
     height: 100vh;
     overflow-y: hidden; 
 }
@@ -18,8 +18,8 @@ body {
     background: linear-gradient(45deg, #1068b6, #ec60a6);
     display: grid;
     grid-template: 100px 300px 100px 100px / repeat(8, 100px);
-    margin: 20px auto 0 ;
-    position: relative;
+    margin: 20px auto 20px ;
+    
     border: 1px solid #f1f1f1;
 }
 
@@ -85,7 +85,10 @@ h1 {
     font-size: 21px;
 }
 .bloc-j{
-        border-top: 3px solid black;
+        border-top: 1px solid black;
+}
+.bloc-h{
+        border-bottom: 1px solid black;
 }
 
 .bloc-h:not(:last-child), .bloc-j:not(:last-child) {
@@ -121,7 +124,7 @@ h1 {
         width: 480px;
         height: 360px;
         grid-template: 50px 190px 60px 60px / repeat(8, 60px);
-
+        
     }
     .bloc-info .temps {
         font-size: 30px;
@@ -136,7 +139,11 @@ h1 {
     .bloc-h, .bloc-j {
         height: 60px;
         font-size: 14.7px;
-    }   
+     }   
+    .overlay-icone-chargement {
+        width: 479px;
+        height: 359px;
+    }
 }
 
 
